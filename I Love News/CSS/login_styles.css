@@ -1,0 +1,40 @@
+/*****
+HEADER
+*****/
+
+/*****
+BODY
+*****/
+
+*{
+	font-family: helvetica; 
+}
+
+#AccountCreation
+{
+	margin: 25px;
+	text-align: center;
+	color: #FFFFFF;
+	
+}
+
+form
+{
+	text-align: center;
+	margin: 25px;
+}
+
+#SignIn
+{
+	text-align: center;
+	color: #FFFFFF;
+	margin: 25px;
+}
+#SignInLink
+{
+	color: #FFFFFF;
+}
+body {
+	background-image: url(../img/earth_news.jpg);
+	background-size: 100%;
+}

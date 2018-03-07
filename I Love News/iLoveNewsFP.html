@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="css/login_styles.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+	<body>
+	
+		<br>
+		<p id="AccountCreation"> Welcome to the <em>I &lt;3 News</em> Webpage!</p>
+		<form id="myForm">
+			<input type="text" id="_email" name="_email" placeholder="Enter email: " />
+			<br>
+			<br>
+			<input type="text" id="_uname" name="_uname" placeholder="Enter username: " />
+			<br>
+			<br>
+			<input type="text" id="_pass" name="_pass" placeholder="Enter password: " />
+			<br>
+			<br>
+			<input type="text" id="_passConfirm" name="_passConfirm" placeholder="Confirm password: " />
+			<br>
+			<br>
+			<button type="button" id="_submit" onclick="creation()">Create Account</button>
+		</form>
+		<p id="SignIn" > 
+		<a href="/Users/lincolnjones/Desktop/WebAppNewsPage-master/I Love News/iLoveNewsMain.html" id="SignInLink"> 
+			Have an account? Click to sign in! 
+		</a>
+		</p>
+</body>
+	<script>
+		$("#_submit").click(function(){
+			url = "http://lvh.me:8080/app/?"; // "http://lvh.me:8080/app/?"
+			url += "email=" + document.getElementById("_email").value;
+			url += "&uname=" + document.getElementById("_uname").value;
+			url += "&pass=" + document.getElementById("_pass").value;
+			$.get(url, function(data, status){
+				alert("Data: " + data + "\nStatus: " + status);
+			});
+		});
+	</script>
+	
+	
+</html>
